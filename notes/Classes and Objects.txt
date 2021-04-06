@@ -1,0 +1,98 @@
+void main() { 
+   Car c= new Car(); 
+   c.disp(); 
+}  
+class Car {  
+   // field 
+   String engine = "E1001";  
+   
+   // function 
+   void disp() { 
+      print(engine); 
+   } 
+}
+
+
+
+
+
+void main() { 
+   Car c = new Car('E1001'); 
+} 
+class Car { 
+   Car(String engine) { 
+      print(engine); 
+   } 
+}
+
+
+
+Named Constructors:
+
+void main() {           
+   Car c1 = new Car.namedConst('E1001');                                       
+   Car c2 = new Car(); 
+}           
+class Car {                   
+   Car() {                           
+      print("Non-parameterized constructor invoked");
+   }                                   
+   Car.namedConst(String engine) { 
+      print("The engine is : ${engine}");    
+   }                               
+}
+
+
+
+Getters and Setters
+
+class Student { 
+   String name; 
+   int age; 
+    
+   String get stud_name { 
+      return name; 
+   } 
+    
+   void set stud_name(String name) { 
+      this.name = name; 
+   } 
+   
+   void set stud_age(int age) { 
+      if(age<= 0) { 
+        print("Age should be greater than 5"); 
+      }  else { 
+         this.age = age; 
+      } 
+   } 
+   
+   int get stud_age { 
+      return age;     
+   } 
+}  
+void main() { 
+   Student s1 = new Student(); 
+   s1.stud_name = 'MARK'; 
+   s1.stud_age = 0; 
+   print(s1.stud_name); 
+   print(s1.stud_age); 
+} 
+
+
+
+
+Inheritance
+
+void main() { 
+   Child c = new Child(); 
+   c.m1(10); 
+} 
+class Parent { 
+   void m1(int a){ print("value of a ${a}");} 
+} 
+class Child extends Parent { 
+   @override 
+   void m1(int b) { 
+      print("value of b ${b}");
+   } 
+}
