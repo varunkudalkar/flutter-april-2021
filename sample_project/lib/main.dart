@@ -30,12 +30,7 @@ void main() {
             UserAccountsDrawerHeader(
                 accountName: Text('User'),
                 accountEmail: Text('user@example.com'),
-                currentAccountPicture: CircleAvatar(
-                  child: Text(
-                    'U',
-                    style: TextStyle(fontSize: 40),
-                  ),
-                ),
+                currentAccountPicture: CircleAvatar(child: Image.asset('')),
                 otherAccountsPictures: [
                   CircleAvatar(
                     child: Text(
